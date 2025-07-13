@@ -1,0 +1,1029 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Material UI Color Variables - Material Design 3 */
+:root {
+    /* Primary Colors */
+    --mui-primary-50: #e3f2fd;
+    --mui-primary-100: #bbdefb;
+    --mui-primary-200: #90caf9;
+    --mui-primary-300: #64b5f6;
+    --mui-primary-400: #42a5f5;
+    --mui-primary-500: #2196f3;
+    --mui-primary-600: #1e88e5;
+    --mui-primary-700: #1976d2;
+    --mui-primary-800: #1565c0;
+    --mui-primary-900: #0d47a1;
+
+    /* Secondary Colors */
+    --mui-secondary-50: #f3e5f5;
+    --mui-secondary-100: #e1bee7;
+    --mui-secondary-200: #ce93d8;
+    --mui-secondary-300: #ba68c8;
+    --mui-secondary-400: #ab47bc;
+    --mui-secondary-500: #9c27b0;
+    --mui-secondary-600: #8e24aa;
+    --mui-secondary-700: #7b1fa2;
+    --mui-secondary-800: #6a1b9a;
+    --mui-secondary-900: #4a148c;
+
+    /* Neutral Colors */
+    --mui-grey-50: #fafafa;
+    --mui-grey-100: #f5f5f5;
+    --mui-grey-200: #eeeeee;
+    --mui-grey-300: #e0e0e0;
+    --mui-grey-400: #bdbdbd;
+    --mui-grey-500: #9e9e9e;
+    --mui-grey-600: #757575;
+    --mui-grey-700: #616161;
+    --mui-grey-800: #424242;
+    --mui-grey-900: #212121;
+
+    /* Semantic Colors */
+    --mui-error: #d32f2f;
+    --mui-warning: #ed6c02;
+    --mui-info: #0288d1;
+    --mui-success: #2e7d32;
+
+    /* Background Colors */
+    --mui-bg-default: #fafafa;
+    --mui-bg-paper: #ffffff;
+    --mui-bg-elevation-1: #ffffff;
+    --mui-bg-elevation-2: #ffffff;
+    --mui-bg-elevation-3: #ffffff;
+
+    /* Text Colors */
+    --mui-text-primary: rgba(0, 0, 0, 0.87);
+    --mui-text-secondary: rgba(0, 0, 0, 0.6);
+    --mui-text-disabled: rgba(0, 0, 0, 0.38);
+    --mui-text-on-primary: #ffffff;
+    --mui-text-on-secondary: #ffffff;
+
+    /* Border Colors */
+    --mui-border-light: rgba(0, 0, 0, 0.12);
+    --mui-border-medium: rgba(0, 0, 0, 0.23);
+    --mui-border-heavy: rgba(0, 0, 0, 0.38);
+
+    /* Shadows */
+    --mui-shadow-1: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    --mui-shadow-2: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    --mui-shadow-3: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+    --mui-shadow-4: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    --mui-shadow-8: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    --mui-shadow-16: 0px 8px 10px 1px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+    --mui-shadow-24: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+
+    /* Typography */
+    --mui-font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    --mui-font-size-xs: 0.75rem;
+    --mui-font-size-sm: 0.875rem;
+    --mui-font-size-md: 1rem;
+    --mui-font-size-lg: 1.125rem;
+    --mui-font-size-xl: 1.25rem;
+    --mui-font-size-xxl: 1.5rem;
+    --mui-font-size-xxxl: 2rem;
+
+    /* Spacing */
+    --mui-spacing-1: 0.25rem;
+    --mui-spacing-2: 0.5rem;
+    --mui-spacing-3: 0.75rem;
+    --mui-spacing-4: 1rem;
+    --mui-spacing-5: 1.25rem;
+    --mui-spacing-6: 1.5rem;
+    --mui-spacing-8: 2rem;
+    --mui-spacing-10: 2.5rem;
+    --mui-spacing-12: 3rem;
+    --mui-spacing-16: 4rem;
+    --mui-spacing-20: 5rem;
+    --mui-spacing-24: 6rem;
+
+    /* Border Radius */
+    --mui-radius-sm: 4px;
+    --mui-radius-md: 8px;
+    --mui-radius-lg: 12px;
+    --mui-radius-xl: 16px;
+
+    /* Transitions */
+    --mui-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --mui-transition-medium: 225ms cubic-bezier(0.4, 0, 0.2, 1);
+    --mui-transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body,
+html,
+#root {
+    font-family: var(--mui-font-family);
+    font-size: var(--mui-font-size-md);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    color: var(--mui-text-primary);
+    background-color: var(--mui-bg-default);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+.page-title,
+.profile-title,
+.profile-section-title,
+.dashboard-header h1 {
+    font-family: var(--mui-font-family);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.00735em;
+    margin-bottom: var(--mui-spacing-2);
+    color: var(--mui-text-primary);
+}
+
+h1 {
+    font-size: var(--mui-font-size-xxxl);
+}
+
+h2 {
+    font-size: var(--mui-font-size-xxl);
+}
+
+h3 {
+    font-size: var(--mui-font-size-xl);
+}
+
+.login-card,
+.signup-card,
+.profile-card,
+.faq-card,
+.material-card,
+.admin-card,
+.audit-card,
+.user-card,
+.meeting-card,
+.volunteer-card,
+.modal-content {
+    background-color: var(--mui-bg-paper);
+    border-radius: var(--mui-radius-lg);
+    box-shadow: var(--mui-shadow-2);
+    padding: var(--mui-spacing-8) var(--mui-spacing-6);
+    margin-bottom: var(--mui-spacing-6);
+    border: 1px solid var(--mui-border-light);
+    transition: box-shadow var(--mui-transition-medium);
+}
+
+.login-card:hover,
+.signup-card:hover,
+.profile-card:hover,
+.faq-card:hover,
+.material-card:hover,
+.admin-card:hover,
+.audit-card:hover,
+.user-card:hover,
+.meeting-card:hover,
+.volunteer-card:hover {
+    box-shadow: var(--mui-shadow-4);
+}
+
+.login-form,
+.signup-form,
+.dashboard-content,
+.faq-list,
+.materials-list {
+    gap: var(--mui-spacing-6);
+}
+
+input,
+select,
+.chat-input {
+    font-family: var(--mui-font-family);
+    font-size: var(--mui-font-size-md);
+    font-weight: 400;
+    padding: var(--mui-spacing-3) var(--mui-spacing-4);
+    border-radius: var(--mui-radius-sm);
+    border: 1px solid var(--mui-border-medium);
+    background: var(--mui-bg-paper);
+    color: var(--mui-text-primary);
+    margin-bottom: var(--mui-spacing-3);
+    transition: border-color var(--mui-transition-fast), box-shadow var(--mui-transition-fast);
+    outline: none;
+    line-height: 1.4375em;
+}
+
+input:focus,
+select:focus,
+.chat-input:focus {
+    border-color: var(--mui-primary-500);
+    box-shadow: 0 0 0 2px var(--mui-primary-100);
+}
+
+input::placeholder {
+    color: var(--mui-text-disabled);
+}
+
+button,
+.action-btn,
+.chat-send-btn,
+.material-btn,
+.download-btn,
+.nav-btn,
+.admin-btn,
+.add-volunteer-btn,
+.cancel-btn,
+.add-btn,
+.tab-btn,
+.signup-button,
+.login-button,
+.google-button {
+    font-family: var(--mui-font-family);
+    font-size: var(--mui-font-size-md);
+    font-weight: 500;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    border-radius: var(--mui-radius-sm);
+    padding: var(--mui-spacing-2) var(--mui-spacing-6);
+    border: none;
+    cursor: pointer;
+    transition: all var(--mui-transition-fast);
+    text-transform: uppercase;
+    min-width: 64px;
+    box-shadow: var(--mui-shadow-1);
+}
+
+button:hover,
+.action-btn:hover,
+.chat-send-btn:hover,
+.material-btn:hover,
+.download-btn:hover,
+.nav-btn:hover,
+.admin-btn:hover,
+.add-volunteer-btn:hover,
+.cancel-btn:hover,
+.add-btn:hover,
+.tab-btn:hover,
+.signup-button:hover,
+.login-button:hover,
+.google-button:hover {
+    box-shadow: var(--mui-shadow-2);
+}
+
+button:active,
+.action-btn:active,
+.chat-send-btn:active,
+.material-btn:active,
+.download-btn:active,
+.nav-btn:active,
+.admin-btn:active,
+.add-volunteer-btn:active,
+.cancel-btn:active,
+.add-btn:active,
+.tab-btn:active,
+.signup-button:active,
+.login-button:active,
+.google-button:active {
+    box-shadow: var(--mui-shadow-1);
+}
+
+.material-title,
+.badge-name,
+.certificate-title,
+.audit-history-title,
+.profile-details h3,
+.card-title,
+.user-name,
+.audit-title,
+.meeting-title {
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.00735em;
+    color: var(--mui-text-primary);
+}
+
+.material-meta,
+.badge-date,
+.certificate-date,
+.audit-history-date,
+.audit-history-status,
+.profile-details p,
+.card-meta,
+.user-meta,
+.audit-meta,
+.meeting-meta,
+.meeting-meta-secondary {
+    font-size: var(--mui-font-size-sm);
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    color: var(--mui-text-secondary);
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--mui-spacing-5);
+    background: var(--mui-bg-default);
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.login-card {
+    background: var(--mui-bg-paper);
+    border-radius: var(--mui-radius-lg);
+    box-shadow: var(--mui-shadow-3);
+    overflow: hidden;
+    position: relative;
+    transition: box-shadow var(--mui-transition-medium);
+    animation: cardPop 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes cardPop {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.login-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--mui-primary-500);
+}
+
+.brand-section {
+    text-align: center;
+    padding: var(--mui-spacing-10) var(--mui-spacing-7) var(--mui-spacing-6);
+    background: var(--mui-bg-paper);
+    border-bottom: 1px solid var(--mui-border-light);
+}
+
+.logo-text {
+    font-size: var(--mui-font-size-xxxl);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.00735em;
+    margin: 0 auto var(--mui-spacing-2) auto;
+    display: flex;
+    align-items: center;
+    gap: var(--mui-spacing-1);
+    color: var(--mui-primary-500);
+}
+
+.brand-section h1 {
+    margin: 0 0 var(--mui-spacing-2) 0;
+    font-size: var(--mui-font-size-xxl);
+    font-weight: 500;
+    color: var(--mui-primary-500);
+    letter-spacing: -0.00735em;
+}
+
+.subtitle {
+    margin: 0;
+    color: var(--mui-text-secondary);
+    font-size: var(--mui-font-size-sm);
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+}
+
+.login-form {
+    padding: 0 var(--mui-spacing-7) var(--mui-spacing-7);
+    animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-group input,
+.form-group select {
+    background: var(--mui-bg-paper);
+    border: 1px solid var(--mui-border-medium);
+    border-radius: var(--mui-radius-sm);
+    font-size: var(--mui-font-size-md);
+    color: var(--mui-text-primary);
+    transition: border-color var(--mui-transition-fast), box-shadow var(--mui-transition-fast);
+    outline: none;
+    line-height: 1.4375em;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--mui-primary-500);
+    box-shadow: 0 0 0 2px var(--mui-primary-100);
+}
+
+.role-option {
+    background: var(--mui-bg-paper);
+    border: 1px solid var(--mui-border-medium);
+    border-radius: var(--mui-radius-sm);
+    color: var(--mui-text-secondary);
+    transition: all var(--mui-transition-fast);
+    cursor: pointer;
+    padding: var(--mui-spacing-3) var(--mui-spacing-4);
+}
+
+.role-option:hover {
+    border-color: var(--mui-primary-500);
+    background: var(--mui-primary-50);
+    color: var(--mui-primary-700);
+}
+
+.role-option.active {
+    border-color: var(--mui-primary-500);
+    background: var(--mui-primary-50);
+    color: var(--mui-primary-700);
+}
+
+.login-button,
+.google-button {
+    background: var(--mui-primary-500);
+    color: var(--mui-text-on-primary);
+    border-radius: var(--mui-radius-sm);
+    font-weight: 500;
+    box-shadow: var(--mui-shadow-1);
+    transition: all var(--mui-transition-fast);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.02857em;
+}
+
+.login-button:hover:not(:disabled),
+.google-button:hover {
+    background: var(--mui-primary-700);
+    box-shadow: var(--mui-shadow-2);
+}
+
+.login-button:active:not(:disabled) {
+    background: var(--mui-primary-800);
+}
+
+.error-message {
+    background: #ffebee;
+    border: 1px solid #ffcdd2;
+    color: var(--mui-error);
+    padding: var(--mui-spacing-3) var(--mui-spacing-4);
+    border-radius: var(--mui-radius-md);
+    margin-bottom: var(--mui-spacing-6);
+    font-size: var(--mui-font-size-sm);
+    font-weight: 500;
+    text-align: center;
+    animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translateX(-2px);
+    }
+
+    20%,
+    80% {
+        transform: translateX(4px);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translateX(-8px);
+    }
+
+    40%,
+    60% {
+        transform: translateX(8px);
+    }
+}
+
+.signup-link {
+    text-align: center;
+    padding: var(--mui-spacing-5) var(--mui-spacing-7);
+    background: var(--mui-bg-paper);
+    border-top: 1px solid var(--mui-border-light);
+}
+
+.signup-link p {
+    margin: 0;
+    color: var(--mui-text-secondary);
+    font-size: var(--mui-font-size-sm);
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+}
+
+.link-button {
+    color: var(--mui-primary-500);
+    font-weight: 500;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: var(--mui-font-size-sm);
+    transition: color var(--mui-transition-fast);
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+}
+
+.link-button:hover {
+    color: var(--mui-primary-700);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .app {
+        padding: var(--mui-spacing-2);
+    }
+
+    .login-card {
+        border-radius: var(--mui-radius-md);
+    }
+
+    .brand-section {
+        padding: var(--mui-spacing-6) var(--mui-spacing-2) var(--mui-spacing-3);
+    }
+
+    .login-form {
+        padding: 0 var(--mui-spacing-2) var(--mui-spacing-3);
+    }
+
+    .signup-link {
+        padding: var(--mui-spacing-3) var(--mui-spacing-2);
+    }
+
+    .brand-section h1 {
+        font-size: var(--mui-font-size-xl);
+    }
+
+    .logo-text {
+        font-size: var(--mui-font-size-xl);
+    }
+}
+
+.modern-login-bg {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modern-login-card {
+    border-radius: var(--mui-radius-xl);
+    box-shadow: var(--mui-shadow-8);
+    padding: 0;
+    background: var(--mui-bg-paper);
+    border: none;
+    max-width: 420px;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.modern-brand-section {
+    background: transparent;
+    border-bottom: none;
+    padding: var(--mui-spacing-12) var(--mui-spacing-8) var(--mui-spacing-6);
+}
+
+.modern-login-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--mui-primary-700);
+    margin-bottom: var(--mui-spacing-2);
+    letter-spacing: -0.01em;
+}
+
+.modern-login-subtitle {
+    color: var(--mui-text-secondary);
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    letter-spacing: 0.01em;
+}
+
+.modern-login-form {
+    padding: var(--mui-spacing-8) var(--mui-spacing-8) var(--mui-spacing-8);
+    display: flex;
+    flex-direction: column;
+    gap: var(--mui-spacing-5);
+    background: transparent;
+}
+
+.modern-form-group {
+    margin-bottom: var(--mui-spacing-3);
+}
+
+.modern-label {
+    font-size: 1rem;
+    color: var(--mui-text-secondary);
+    font-weight: 500;
+    margin-bottom: var(--mui-spacing-1);
+    transition: color 0.2s;
+}
+
+.modern-role-selector {
+    display: flex;
+    gap: var(--mui-spacing-2);
+    margin-top: var(--mui-spacing-2);
+    margin-bottom: var(--mui-spacing-1);
+}
+
+.modern-role-option {
+    flex: 1 1 0;
+    min-width: 90px;
+    max-width: 140px;
+    background: var(--mui-grey-100);
+    border: 2px solid var(--mui-border-light);
+    color: var(--mui-text-secondary);
+    font-weight: 600;
+    font-size: 1.02rem;
+    border-radius: var(--mui-radius-md);
+    padding: var(--mui-spacing-3) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.18s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: none;
+    cursor: pointer;
+    outline: none;
+    white-space: nowrap;
+}
+
+.modern-role-option .role-icon {
+    font-size: 1.5rem;
+    margin-bottom: 2px;
+}
+
+.modern-role-option.active,
+.modern-role-option:focus {
+    background: var(--mui-primary-50);
+    border-color: var(--mui-primary-500);
+    color: var(--mui-primary-700);
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+}
+
+.modern-role-option:hover {
+    border-color: var(--mui-primary-300);
+    color: var(--mui-primary-700);
+}
+
+.modern-floating-label-group {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.modern-input {
+    width: 100%;
+    padding: var(--mui-spacing-4) var(--mui-spacing-3) var(--mui-spacing-2) var(--mui-spacing-3);
+    font-size: 1rem;
+    border: 1.5px solid var(--mui-border-light);
+    border-radius: var(--mui-radius-md);
+    background: var(--mui-bg-paper);
+    color: var(--mui-text-primary);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    margin-bottom: 0;
+}
+
+.modern-input:focus {
+    border-color: var(--mui-primary-500);
+    box-shadow: 0 0 0 2px var(--mui-primary-100);
+}
+
+.modern-floating-label-group label {
+    position: absolute;
+    left: var(--mui-spacing-3);
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--mui-bg-paper);
+    padding: 0 4px;
+    color: var(--mui-text-secondary);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: 0.18s cubic-bezier(.4, 0, .2, 1);
+}
+
+.modern-label-float {
+    top: -0.7rem !important;
+    left: var(--mui-spacing-2);
+    font-size: 0.85rem !important;
+    color: var(--mui-primary-700) !important;
+    background: var(--mui-bg-paper);
+    padding: 0 4px;
+}
+
+.modern-form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--mui-spacing-2);
+    font-size: 0.97rem;
+}
+
+.modern-checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.97rem;
+    color: var(--mui-text-secondary);
+}
+
+.modern-link {
+    color: var(--mui-primary-500);
+    font-weight: 500;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.97rem;
+    transition: color 0.2s;
+}
+
+.modern-link:hover {
+    color: var(--mui-primary-700);
+}
+
+.modern-login-btn {
+    width: 100%;
+    background: var(--mui-primary-500);
+    color: var(--mui-text-on-primary);
+    font-weight: 700;
+    font-size: 1.08rem;
+    border-radius: var(--mui-radius-md);
+    box-shadow: var(--mui-shadow-2);
+    padding: var(--mui-spacing-3) 0;
+    margin-top: var(--mui-spacing-2);
+    margin-bottom: var(--mui-spacing-2);
+    transition: background 0.18s, box-shadow 0.18s;
+}
+
+.modern-login-btn:hover:not(:disabled) {
+    background: var(--mui-primary-700);
+    box-shadow: var(--mui-shadow-4);
+}
+
+.modern-google-btn {
+    width: 100%;
+    background: #fff;
+    color: var(--mui-primary-700);
+    border: 1.5px solid var(--mui-primary-100);
+    font-weight: 600;
+    font-size: 1.08rem;
+    border-radius: var(--mui-radius-md);
+    box-shadow: var(--mui-shadow-1);
+    padding: var(--mui-spacing-3) 0;
+    margin-top: var(--mui-spacing-2);
+    margin-bottom: var(--mui-spacing-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.18s, box-shadow 0.18s, border-color 0.18s;
+}
+
+.modern-google-btn:hover {
+    background: var(--mui-primary-50);
+    border-color: var(--mui-primary-300);
+    box-shadow: var(--mui-shadow-2);
+}
+
+.modern-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--mui-text-secondary);
+    font-size: 0.97rem;
+    margin: var(--mui-spacing-3) 0;
+}
+
+.modern-divider span {
+    background: var(--mui-bg-paper);
+    padding: 0 12px;
+    z-index: 1;
+}
+
+.modern-divider:before,
+.modern-divider:after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--mui-border-light);
+    margin: 0 4px;
+}
+
+.modern-signup-link {
+    background: transparent;
+    border-top: none;
+    text-align: center;
+    padding: var(--mui-spacing-4) var(--mui-spacing-8) var(--mui-spacing-6);
+}
+
+.modern-login-wide-card {
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    min-height: 520px;
+    background: var(--mui-bg-paper);
+    border-radius: var(--mui-radius-xl);
+    box-shadow: var(--mui-shadow-16);
+    overflow: hidden;
+    margin: 0 auto;
+    animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modern-login-left {
+    flex: 1.1;
+    background: linear-gradient(135deg, #e3f2fd 0%, #ede7f6 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--mui-spacing-12) var(--mui-spacing-6);
+    min-width: 260px;
+    border-right: 1.5px solid var(--mui-border-light);
+}
+
+.modern-illustration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--mui-spacing-6);
+    width: 100%;
+}
+
+.modern-logo-text {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--mui-secondary-700);
+    margin-top: var(--mui-spacing-4);
+    margin-bottom: 0;
+    letter-spacing: -0.01em;
+    display: flex;
+    gap: 4px;
+}
+
+.modern-logo-text .logo-sensing {
+    color: var(--mui-secondary-700);
+}
+
+.modern-logo-text .logo-local {
+    color: var(--mui-primary-700);
+}
+
+.modern-login-brand-desc {
+    text-align: center;
+    margin-top: var(--mui-spacing-4);
+}
+
+.modern-login-brand-desc h1 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: var(--mui-primary-700);
+    margin-bottom: var(--mui-spacing-2);
+    letter-spacing: -0.01em;
+}
+
+.modern-login-brand-desc p {
+    color: var(--mui-text-secondary);
+    font-size: 1.08rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    letter-spacing: 0.01em;
+}
+
+.modern-login-right {
+    flex: 1.3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--mui-spacing-12) var(--mui-spacing-8);
+    background: var(--mui-bg-paper);
+    min-width: 340px;
+    max-width: 480px;
+    width: 100%;
+}
+
+.modern-role-selector {
+    display: flex;
+    gap: var(--mui-spacing-3);
+    margin-top: var(--mui-spacing-2);
+    margin-bottom: var(--mui-spacing-1);
+    width: 100%;
+    justify-content: space-between;
+}
+
+.modern-role-option {
+    flex: 1 1 0;
+    min-width: 90px;
+    max-width: 140px;
+    background: var(--mui-grey-100);
+    border: 2px solid var(--mui-border-light);
+    color: var(--mui-text-secondary);
+    font-weight: 600;
+    font-size: 1.02rem;
+    border-radius: var(--mui-radius-md);
+    padding: var(--mui-spacing-3) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.18s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: none;
+    cursor: pointer;
+    outline: none;
+    white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+    .modern-login-wide-card {
+        width: 99vw;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .modern-login-wide-card {
+        width: 99vw;
+        min-width: 0;
+    }
+
+    .modern-login-left,
+    .modern-login-right {
+        padding: var(--mui-spacing-8) var(--mui-spacing-2);
+    }
+
+    .modern-login-right {
+        min-width: 0;
+        max-width: 100vw;
+    }
+}
+
+@media (max-width: 700px) {
+    .modern-login-wide-card {
+        flex-direction: column;
+        width: 99vw;
+        min-width: 0;
+        border-radius: var(--mui-radius-lg);
+        box-shadow: var(--mui-shadow-4);
+    }
+
+    .modern-login-left {
+        border-right: none;
+        border-bottom: 1.5px solid var(--mui-border-light);
+        min-width: 0;
+        padding: var(--mui-spacing-6) var(--mui-spacing-2);
+    }
+
+    .modern-login-right {
+        padding: var(--mui-spacing-6) var(--mui-spacing-2);
+        min-width: 0;
+        max-width: 100vw;
+    }
+
+    .modern-illustration svg {
+        width: 120px;
+        height: 120px;
+    }
+
+    .modern-logo-text {
+        font-size: 1.3rem;
+    }
+
+    .modern-login-brand-desc h1 {
+        font-size: 1.3rem;
+    }
+
+    .modern-role-selector {
+        flex-direction: column;
+        gap: var(--mui-spacing-2);
+    }
+
+    .modern-role-option {
+        min-width: 90vw;
+        max-width: 100vw;
+        width: 100%;
+        padding: var(--mui-spacing-4) 0;
+        font-size: 1.05rem;
+    }
+}
