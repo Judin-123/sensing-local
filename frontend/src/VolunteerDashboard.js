@@ -659,7 +659,7 @@ const VolunteerDashboard = ({ userData }) => {
                                                 <Button
                                                     variant="contained"
                                                     size="large"
-                                                    onClick={handleCompleteAudit}
+                                                    onClick={() => window.open('https://app.merginmaps.com/', '_blank')}
                                                     disabled={auditCompleted}
                                                     startIcon={<AssignmentIcon />}
                                                 >

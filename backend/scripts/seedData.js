@@ -24,7 +24,7 @@ const connectDB = async () => {
 const seedData = async () => {
   try {
     console.log('Starting data seeding process...');
-    
+
     // Clear existing data
     await Promise.all([
       User.deleteMany({}),
@@ -160,7 +160,18 @@ const seedData = async () => {
         startTime: '09:00',
         endTime: '17:00',
         status: 'active',
-        maxVolunteers: 5
+        maxVolunteers: 5,
+        presentVolunteers: 2,
+        absentVolunteers: 1,
+        addedVolunteers: 1,
+        replacementVolunteers: 0,
+        totalVolunteers: 3,
+        coordinator: 'John Coordinator',
+        tasks: [
+          { id: 'TASK001', name: 'Air Quality Sensor Setup', volunteer: 'Jane Volunteer', completed: true },
+          { id: 'TASK002', name: 'Data Collection - Morning Shift', volunteer: 'Alice Volunteer', completed: false },
+          { id: 'TASK003', name: 'Data Collection - Afternoon Shift', volunteer: 'Bob Volunteer', completed: false }
+        ]
       },
       {
         title: 'Water Quality Assessment',
@@ -175,7 +186,17 @@ const seedData = async () => {
         startTime: '08:00',
         endTime: '16:00',
         status: 'planned',
-        maxVolunteers: 4
+        maxVolunteers: 4,
+        presentVolunteers: 1,
+        absentVolunteers: 1,
+        addedVolunteers: 0,
+        replacementVolunteers: 1,
+        totalVolunteers: 2,
+        coordinator: 'John Coordinator',
+        tasks: [
+          { id: 'TASK005', name: 'Water Sample Collection', volunteer: 'Alice Volunteer', completed: false },
+          { id: 'TASK006', name: 'pH Level Testing', volunteer: 'Charlie Volunteer', completed: false }
+        ]
       },
       {
         title: 'Noise Pollution Survey',
@@ -190,7 +211,17 @@ const seedData = async () => {
         startTime: '10:00',
         endTime: '18:00',
         status: 'planned',
-        maxVolunteers: 3
+        maxVolunteers: 3,
+        presentVolunteers: 2,
+        absentVolunteers: 0,
+        addedVolunteers: 0,
+        replacementVolunteers: 0,
+        totalVolunteers: 2,
+        coordinator: 'Sarah Coordinator',
+        tasks: [
+          { id: 'TASK008', name: 'Noise Level Measurement - Residential', volunteer: 'Jane Volunteer', completed: true },
+          { id: 'TASK009', name: 'Noise Level Measurement - Commercial', volunteer: 'Bob Volunteer', completed: false }
+        ]
       },
       {
         title: 'Waste Management Assessment',
@@ -204,10 +235,37 @@ const seedData = async () => {
         endDate: new Date('2025-07-31'),
         startTime: '07:00',
         endTime: '15:00',
-        status: 'planned',
-        maxVolunteers: 2
+        status: 'completed',
+        maxVolunteers: 2,
+        presentVolunteers: 1,
+        absentVolunteers: 0,
+        addedVolunteers: 0,
+        replacementVolunteers: 0,
+        totalVolunteers: 1,
+        coordinator: 'Sarah Coordinator',
+        tasks: [
+          { id: 'TASK010', name: 'Waste Collection Point Survey', volunteer: 'Charlie Volunteer', completed: true },
+          { id: 'TASK011', name: 'Waste Segregation Analysis', volunteer: 'Charlie Volunteer', completed: false }
+        ]
       }
     ]);
+
+    // Add more campaigns and coordinators as needed for graphs...
+
+    // Add assignedWards, completedAudits, totalAudits, performance, email to coordinators
+    coordinators[0].assignedWards = ['Central Ward', 'North Ward'];
+    coordinators[0].completedAudits = 5;
+    coordinators[0].totalAudits = 7;
+    coordinators[0].performance = 'Excellent';
+    coordinators[0].email = 'john@example.com';
+    await coordinators[0].save();
+
+    coordinators[1].assignedWards = ['South Ward', 'East Ward'];
+    coordinators[1].completedAudits = 3;
+    coordinators[1].totalAudits = 5;
+    coordinators[1].performance = 'Good';
+    coordinators[1].email = 'sarah@example.com';
+    await coordinators[1].save();
 
     console.log(`✓ Created ${campaigns.length} campaigns`);
 
@@ -474,7 +532,7 @@ const seedData = async () => {
         const campaign = campaigns.find(c => c._id.equals(task.campaignId));
         return campaign && campaign.wardId.equals(wards[i]._id);
       });
-      
+
       await Ward.findByIdAndUpdate(wards[i]._id, {
         tasks: wardTasks.map(task => task._id)
       });
@@ -509,7 +567,7 @@ const seedData = async () => {
       const coordinator = coordinators.find(c => c._id.equals(campaign.coordinatorId));
       const campaignTasks = tasks.filter(t => t.campaignId.equals(campaign._id));
       const campaignAttendance = attendance.filter(a => a.campaignId.equals(campaign._id));
-      
+
       console.log(`\n${index + 1}. ${campaign.title}`);
       console.log(`   Ward: ${ward.wardName} (${ward.location})`);
       console.log(`   Coordinator: ${coordinator.name}`);
@@ -520,7 +578,7 @@ const seedData = async () => {
 
     console.log('\n=== READY FOR TESTING ===');
     console.log('All data is now consistent and properly linked!');
-    
+
     process.exit(0);
   } catch (error) {
     console.error('Error seeding data:', error);

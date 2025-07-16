@@ -179,7 +179,7 @@ const AdminDashboard = ({ userData }) => {
   }));
 
   const coordinatorPerformanceData = coordinators.map(coordinator => ({
-    name: coordinator.name,
+    name: coordinator.name || 'Unknown',
     completed: coordinator.completedAudits || 0,
     total: coordinator.totalAudits || 0,
     performance: coordinator.performance || 0
@@ -424,7 +424,7 @@ const AdminDashboard = ({ userData }) => {
                         </TableRow>
                       </TableHead>
                       <TableBody>
-                        {selectedAudit.tasks.map((task) => (
+                        {(selectedAudit.tasks || []).map((task) => (
                           <TableRow key={task.id}>
                             <TableCell>{task.name}</TableCell>
                             <TableCell>{task.volunteer}</TableCell>
@@ -840,17 +840,17 @@ const AdminDashboard = ({ userData }) => {
                               <TableCell>
                                 <Stack direction="row" spacing={1} alignItems="center">
                                   <Avatar sx={{ width: 32, height: 32 }}>
-                                    {coordinator.name.charAt(0)}
+                                    {coordinator.name?.charAt(0) || 'C'}
                                   </Avatar>
-                                  <Typography>{coordinator.name}</Typography>
+                                  <Typography>{coordinator.name || 'Unknown'}</Typography>
                                 </Stack>
                               </TableCell>
-                              <TableCell>{coordinator.email}</TableCell>
-                              <TableCell>{coordinator.assignedWards.join(", ")}</TableCell>
-                              <TableCell>{coordinator.completedAudits}/{coordinator.totalAudits}</TableCell>
+                              <TableCell>{coordinator.email || 'N/A'}</TableCell>
+                              <TableCell>{(coordinator.assignedWards || []).join(", ") || 'N/A'}</TableCell>
+                              <TableCell>{(coordinator.completedAudits || 0)}/{(coordinator.totalAudits || 0)}</TableCell>
                               <TableCell>
                                 <Chip
-                                  label={coordinator.performance}
+                                  label={coordinator.performance || 'N/A'}
                                   color={coordinator.performance === 'Excellent' ? 'success' : 'primary'}
                                   size="small"
                                 />

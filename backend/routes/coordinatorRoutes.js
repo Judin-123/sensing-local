@@ -60,10 +60,46 @@ router.get('/coordinators', async (req, res, next) => {
       isActive: true
     }).select('name email score');
 
+    // Enhance coordinator data with additional fields
+    const enhancedCoordinators = await Promise.all(coordinators.map(async (coordinator) => {
+      // Get campaigns for this coordinator
+      const campaigns = await Campaign.find({ coordinatorId: coordinator._id });
+      const completedAudits = campaigns.filter(c => c.status === 'completed').length;
+      const totalAudits = campaigns.length;
+
+      // Get unique wards from campaigns
+      const wardIds = [...new Set(campaigns.map(c => c.wardId).filter(Boolean))];
+      const wards = await Promise.all(wardIds.map(async (wardId) => {
+        const ward = await require('../models/Ward').findById(wardId);
+        return ward ? ward.wardName : 'Unknown Ward';
+      }));
+
+      // Calculate performance based on completion rate
+      let performance = 'Average';
+      if (totalAudits > 0) {
+        const completionRate = (completedAudits / totalAudits) * 100;
+        if (completionRate >= 90) performance = 'Excellent';
+        else if (completionRate >= 75) performance = 'Good';
+        else if (completionRate >= 50) performance = 'Average';
+        else performance = 'Poor';
+      }
+
+      return {
+        id: coordinator._id,
+        name: coordinator.name,
+        email: coordinator.email,
+        score: coordinator.score,
+        assignedWards: wards,
+        completedAudits,
+        totalAudits,
+        performance
+      };
+    }));
+
     res.status(200).json({
       success: true,
-      count: coordinators.length,
-      data: coordinators
+      count: enhancedCoordinators.length,
+      data: enhancedCoordinators
     });
   } catch (error) {
     next(error);
